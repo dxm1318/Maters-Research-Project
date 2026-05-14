@@ -50,6 +50,8 @@ Similar to the preprocessing step, each of the simulation scripts follow a simil
       - returns a folder with outputted statistical results
       - for each metric: parameter vs. metric, DP type vs. metric, and the interaction between  parameter and DP type
 
+**The preprocessed data is included in the simulation code folder. To run the simulations, simply run the scripts.**
+
 ## Requirements to run code
 
   1. MATLAB 2017a or later
