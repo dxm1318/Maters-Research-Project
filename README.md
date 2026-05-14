@@ -38,9 +38,9 @@ The simulation code is responsible for the separation and extraction of Short-La
   2. Declare initial parameters
   3. loop through parameter test range
   4. loop through the preprocessed dataset. For each element in the dataset corresponding to a single DPOAE:
-      - Deconvolve the DPOAE (`VIR_deconv.m`)
-      - Separate the different distortion products (`separate_SL_LL.m`)
-      - for each distortion product, separate the short latency and long latnecy components
+      - Deconvolve the DPOAE (`VIR_deconv.m` and `synchronized_swept_sine_spectra.m`)
+      - Separate the different distortion products (`synchronzied_swept_sine_IR_separation.m`)
+      - for each distortion product, separate the short latency and long latnecy components(`separate_SL_LL.m`)
       - Calculate the metrics (`compute_metrics.m`): temporal separation (latency), overlap %, and Signal-to-Noise ratio of the short latency component 
   5. Organize the data into csv files: `organize_results_r.m`, `organize_results_a.m`, and `organize_results_L.m`
   6. Visualize the data (plots)
