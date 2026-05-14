@@ -14,13 +14,13 @@ Each script goes through a similar process.
      `amt_start`, 
      `amt_mex`
 
-  If there is no error, everything is working as it should. The amt_toolbox is provided in the preprocessing folder. 
+      If there is no error, everything is working as it should. The amtoolbox is provided           in the preprocessing folder. 
  
   2. Declaration of initial parameters (sample rate, start/stop frequency for sine sweeps, etc.)
   3. Loop through parameter test range
   4. With a nested for loop, generate 10 unique DPOAEs for each parameter value using `verhulst2012.m`.   
      `SSS_gen.m` and `synchronized_swept_sine.m`  --> generate the synchronized swept sines
-     `get_OAE.m` --> input synchronized swept sines into 'verhulst2012.m' to create our DPOAE       data set
+     `get_OAE.m` --> input synchronized swept sines into 'verhulst2012.m' to output our simulated DPOAE response     
   5. Save the preprocessed dataset as a `.mat` file: 
      `PreGenerated_OAE_R.mat`, 
      `PreGenerated_OAE_alpha.mat`, and
@@ -32,7 +32,7 @@ The simulation code is responsible for the separation and extraction of Short-La
   `r_sim.m`, 
   `alpha_sim.m`, and 
   `stim_sim.m`
-
+Similar to the preprocessing step, each of the simulation scripts follow a similar process: 
   1. If not done already, load the preprocessed data into the MATLAB workspace. In the command window type: `load('name_of_dataset.mat')`
   2. Declare initial parameters
   3. loop through parameter test range
@@ -47,10 +47,10 @@ The simulation code is responsible for the separation and extraction of Short-La
 
 ## Requirements to run code
 
-  1. Statistics and Machine Learning Toolbox
+  1. MATLAB 2017a or later
   2. Signal Processing Toolbox
   3. Auditory Modeling Toolbox
-  4. MATLAB 2017a or later
+  4. Statistics and Machine Learning Toolbox
   5. Antonin Novak Synchronized Swept Sine Functions --> https://ant-novak.com/posts/research/2015-10-30_JAES_Swept/
   
 
