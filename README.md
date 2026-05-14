@@ -41,9 +41,14 @@ Similar to the preprocessing step, each of the simulation scripts follow a simil
       - Separate the different distortion products (`synchronzied_swept_sine_IR_separation.m`)
       - for each distortion product, separate the short latency and long latnecy components(`separate_SL_LL.m`)
       - Calculate the metrics (`compute_metrics.m`): temporal separation (latency), overlap %, and Signal-to-Noise ratio of the short latency component 
-  5. Organize the data into csv files: `organize_results_r.m`, `organize_results_a.m`, and `organize_results_L.m`
-  6. Visualize the data (plots)
-  7. Statistical Analysis (2-way ANOVA)
+  5. Organize the data (converts .mat files into .csv files): `organize_results_r.m`, `organize_results_a.m`, and `organize_results_L.m`
+  6. Visualize the data (plots):
+      - parameter vs. Temporal Separation
+      - parameter vs. Overlap %
+      - parameter vs. SNR of SL component
+  7. Statistical Analysis (2-way ANOVA):
+      - returns a folder with outputted statistical results
+      - for each metric: parameter vs. metric, DP type vs. metric, and the interaction between  parameter and DP type
 
 ## Requirements to run code
 
@@ -51,6 +56,7 @@ Similar to the preprocessing step, each of the simulation scripts follow a simil
   2. Signal Processing Toolbox
   3. Auditory Modeling Toolbox
   4. Statistics and Machine Learning Toolbox
+     - specifically required for `anonvan()` and `multcompare()` functions
   5. Antonin Novak Synchronized Swept Sine Functions --> https://ant-novak.com/posts/research/2015-10-30_JAES_Swept/
   
 
